@@ -1,9 +1,13 @@
-language: c
+os:
+  - osx
+  - linux
 
 before_script:
   - ./buildconf
 
 script: ./configure --enable-debug && make && make test-full
+
+language: c
 
 compiler:
   - clang
