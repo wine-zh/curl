@@ -3,6 +3,7 @@ os:
   - linux
 
 install:
+  - echo $TRAVIS_OS_NAME
   - if [ "$TRAVIS_OS_NAME" == "osx"]; then brew install openssl libidn rtmpdump libssh2 c-cares libmetalink libressl nghttp2; fi
 before_script:
   - ./buildconf
